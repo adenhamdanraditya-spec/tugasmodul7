@@ -70,7 +70,7 @@ const proyek = [
     {
         nama: "Tabel Jadwal",
         kategori: "HTML",
-        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\aden.jpg"
+        gambar: "https://github.com/adenhamdanraditya-spec/tugasmodul7/blob/main/tugas_rumah/img/aden.jpg?raw=true"
     },
     {
         nama: "Portofolio Responsif",
