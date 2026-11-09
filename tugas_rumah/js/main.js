@@ -80,7 +80,7 @@ const proyek = [
     {
         nama: "Kalkulator Nilai",
         kategori: "JavaScript",
-        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\kalkulator.png"
+        gambar: "https://github.com/adenhamdanraditya-spec/tugasmodul7/blob/main/tugas_rumah/img/kalkulator.png?raw=true"
     }  
 ];
 // =================================
