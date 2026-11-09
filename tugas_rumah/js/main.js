@@ -62,7 +62,7 @@ const proyek = [
     {
         nama: "Profil",
         kategori: "HTML",
-        gambar: "https://github.com/adenhamdanraditya-spec/tugasmodul7/blob/main/tugas_rumah/img/html%20proyek.png?raw=truev"
+        gambar: "https://github.com/adenhamdanraditya-spec/tugasmodul7/blob/main/tugas_rumah/img/html%20proyek.png?raw=true"
     },
     
     
@@ -75,7 +75,7 @@ const proyek = [
     {
         nama: "Portofolio Responsif",
         kategori: "CSS",
-        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\responsive.png"
+        gambar: "https://github.com/adenhamdanraditya-spec/tugasmodul7/blob/main/tugas_rumah/img/responsive.png?raw=true"
     },
     {
         nama: "Kalkulator Nilai",
