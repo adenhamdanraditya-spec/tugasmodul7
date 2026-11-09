@@ -62,7 +62,7 @@ const proyek = [
     {
         nama: "Profil",
         kategori: "HTML",
-        gambar: "tugas_rumah/img/Screenshot 2026-11-08 101922.png"
+        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\html proyek.png"
     },
     
     
@@ -70,23 +70,18 @@ const proyek = [
     {
         nama: "Tabel Jadwal",
         kategori: "HTML",
-        gambar: "tugas_rumah/img/jadwal.png"
+        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\aden.jpg"
     },
     {
         nama: "Portofolio Responsif",
         kategori: "CSS",
-        gambar: "tugas_rumah/img/jadwal.png"
+        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\responsive.png"
     },
     {
         nama: "Kalkulator Nilai",
         kategori: "JavaScript",
-        gambar: "tugas_rumah/img/prib.jpg"
-    },
-    {
-        nama: "Lima Soal Logika",
-        kategori: "JavaScript",
-        gambar: "tugas_rumah/img/proyek-jadwal.png"
-    }
+        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\kalkulator.png"
+    }  
 ];
 // =================================
 // 5. MENAMPILKAN KARTU PROYEK
