@@ -62,7 +62,7 @@ const proyek = [
     {
         nama: "Profil",
         kategori: "HTML",
-        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\html proyek.png"
+        gambar: "https://github.com/adenhamdanraditya-spec/tugasmodul7/blob/main/tugas_rumah/img/html%20proyek.png?raw=truev"
     },
     
     
