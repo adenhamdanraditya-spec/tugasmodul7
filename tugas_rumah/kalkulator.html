@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Nilai</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<button id="tombol-tema">Mode Gelap</button>
+<link rel="stylesheet" href="css/style.css">
+<body>
+
+    <div class="container">
+        <h1>Kalkulator Nilai</h1>
+        <p>Masukkan Nilai tugas, UTS, dan UAS, lalu tekan tombol hitung.</p>
+
+        <div class="form-group">
+            <label for="tugas">Nilai tugas</label>
+            <input type="number" id="tugas" placeholder="Masukkan nilai tugas" min="0" max="100">
+        </div>
+
+        <div class="form-group">
+            <label for="uts">Nilai UTS</label>
+            <input type="number" id="uts" placeholder="Masukkan nilai UTS" min="0" max="100">
+        </div>
+
+        <div class="form-group">
+            <label for="uas">Nilai UAS</label>
+            <input type="number" id="uas" placeholder="Masukkan nilai UAS" min="0" max="100">
+        </div>
+
+        <button type="button" id="btnHitung">Hitung</button>
+
+        <div id="hasil" class="hasil"></div>
+    </div>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+</body>
+</html>
