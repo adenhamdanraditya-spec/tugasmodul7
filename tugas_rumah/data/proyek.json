@@ -1,0 +1,26 @@
+[
+  {
+    "nama": "Proyek HTML",
+    "kategori": "HTML",
+    "deskripsi": "Membuat halaman website menggunakan HTML.",
+    "gambar": "img/html proyek.png"
+  },
+  {
+    "nama": "Website CSS",
+    "kategori": "CSS",
+    "deskripsi": "Membuat tampilan website menggunakan CSS.",
+    "gambar": "img/responsive.png"
+  },
+  {
+    "nama": "Kalkulator",
+    "kategori": "JavaScript",
+    "deskripsi": "Membuat kalkulator sederhana.",
+    "gambar": "img/kalkulator.png"
+  },
+  {
+    "nama": "Desain UI UX",
+    "kategori": "UI/UX",
+    "deskripsi": "Membuat desain antarmuka aplikasi.",
+    "gambar": "img/aden.jpg "
+  }
+]

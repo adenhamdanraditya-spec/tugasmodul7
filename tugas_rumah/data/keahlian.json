@@ -1,0 +1,18 @@
+[
+  {
+    "nama": "HTML",
+    "tingkat": "Pemula"
+  },
+  {
+    "nama": "CSS",
+    "tingkat": "Pemula"
+  },
+  {
+    "nama": "JavaScript",
+    "tingkat": "Pemula"
+  },
+  {
+    "nama": "UI/UX Design",
+    "tingkat": "Pemula"
+  }
+]

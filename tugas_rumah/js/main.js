@@ -1,24 +1,38 @@
+
 // =================================
-// 1. DATA KEAHLIAN
+// 1. MENGAMBIL DATA KEAHLIAN JSON
 // =================================
 
-const keahlian = [
-    { nama: "HTML", tingkat: "Pemula" },
-    { nama: "CSS", tingkat: "Pemula" },
-    { nama: "JavaScript", tingkat: "Pemula" },
-    { nama: "UI/UX Design", tingkat: "Pemula" }
-];
+async function ambilKeahlian() {
+    try {
+        const response = await fetch("data/keahlian.json");
 
-// Menampilkan keahlian
-const daftarKeahlian = document.querySelector("#daftar-keahlian");
+        if (!response.ok) {
+            throw new Error("Gagal mengambil data keahlian");
+        }
 
-if (daftarKeahlian) {
-    keahlian.forEach((item) => {
-        const elemen = document.createElement("p");
-        elemen.textContent = item.nama + " - " + item.tingkat;
-        daftarKeahlian.appendChild(elemen);
-    });
+        const keahlian = await response.json();
+
+        const daftarKeahlian = document.querySelector("#daftar-keahlian");
+
+        if (daftarKeahlian) {
+            daftarKeahlian.innerHTML = "";
+
+            keahlian.forEach(item => {
+                const elemen = document.createElement("p");
+                elemen.textContent = item.nama + " - " + item.tingkat;
+                daftarKeahlian.appendChild(elemen);
+            });
+        }
+
+        console.log("Data keahlian berhasil:", keahlian);
+
+    } catch (error) {
+        console.error(error);
+    }
 }
+
+ambilKeahlian();
 
 
 // =================================
@@ -56,33 +70,31 @@ if (pesan && jumlahKarakter) {
 
 
 // =================================
-// 4. DATA PROYEK
+// 4. MENGAMBIL DATA PROYEK JSON
 // =================================
-const proyek = [
-    {
-        nama: "Profil",
-        kategori: "HTML",
-        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\html proyek.png"
-    },
-    
-    
 
-    {
-        nama: "Tabel Jadwal",
-        kategori: "HTML",
-        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\aden.jpg"
-    },
-    {
-        nama: "Portofolio Responsif",
-        kategori: "CSS",
-        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\responsive.png"
-    },
-    {
-        nama: "Kalkulator Nilai",
-        kategori: "JavaScript",
-        gambar: "C:\\Users\\ADEN\\Documents\\tugasrumahmarvel\\tugas_rumah\\img\\kalkulator.png"
-    }  
-];
+let semuaProyek = [];
+
+async function ambilDataProyek() {
+    try {
+        const response = await fetch("data/proyek.json");
+
+        if (!response.ok) {
+            throw new Error("Gagal mengambil data proyek");
+        }
+
+        semuaProyek = await response.json();
+
+        console.log("Data Proyek:", semuaProyek);
+
+        tampilkanProyek(semuaProyek);
+        aktifkanFilter();
+
+    } catch (error) {
+        console.error("Gagal mengambil data proyek:", error);
+    }
+}
+
 // =================================
 // 5. MENAMPILKAN KARTU PROYEK
 // =================================
@@ -92,46 +104,113 @@ const daftarProyek = document.querySelector("#daftar-proyek");
 function tampilkanProyek(data) {
     if (!daftarProyek) return;
 
-    daftarProyek.innerHTML = data.map((item) => `
-        <div class="card-proyek">
-            <img src="${item.gambar}" alt="${item.nama}">
-            <h3>${item.nama}</h3>
-            <p>${item.kategori}</p>
-        </div>
-    `).join("");
-}
+    daftarProyek.innerHTML = "";
 
-tampilkanProyek(proyek);
+    data.forEach(item => {
+        const kartu = document.createElement("div");
+        kartu.className = "card-proyek";
+
+        const gambar = document.createElement("img");
+        gambar.src = item.gambar;
+        gambar.alt = item.nama;
+
+        const judul = document.createElement("h3");
+        judul.textContent = item.nama;
+
+        const kategori = document.createElement("p");
+        kategori.textContent = item.kategori;
+
+        const deskripsi = document.createElement("p");
+        deskripsi.textContent = item.deskripsi || "";
+
+        kartu.append(gambar, judul, kategori, deskripsi);
+        daftarProyek.appendChild(kartu);
+    });
+}
 
 // =================================
 // 6. FILTER PROYEK
 // =================================
 
-const tombolFilter = document.querySelectorAll(
-    "#filter-semua, #filter-html, #filter-css, #filter-js"
-);
+function aktifkanFilter() {
+    const tombolFilter = document.querySelectorAll(
+        "#filter-semua, #filter-html, #filter-css, #filter-js"
+    );
 
-tombolFilter.forEach((tombol) => {
-    tombol.addEventListener("click", function () {
+    tombolFilter.forEach(tombol => {
+        tombol.addEventListener("click", function () {
 
-        const kategori = tombol.textContent.trim();
+            const kategori = tombol.textContent.trim();
 
-        let hasil;
+            let hasil;
 
-        if (kategori === "Semua") {
-            hasil = proyek;
-        } else {
-            hasil = proyek.filter((item) =>
-                item.kategori === kategori
-            );
+            if (kategori === "Semua") {
+                hasil = semuaProyek;
+            } else {
+                const kategoriTarget =
+                    kategori === "JS" ? "JavaScript" : kategori;
+
+                hasil = semuaProyek.filter(item =>
+                    item.kategori === kategoriTarget
+                );
+            }
+
+            tampilkanProyek(hasil);
+
+            tombolFilter.forEach(btn => {
+                btn.classList.remove("aktif");
+            });
+
+            tombol.classList.add("aktif");
+        });
+    });
+}
+
+ambilDataProyek();
+// =================================
+// 7. MENGAMBIL DATA GITHUB API
+// =================================
+
+async function ambilGithub() {
+    const daftarGithub = document.querySelector("#daftar-github");
+
+    if (!daftarGithub) return;
+
+    try {
+        daftarGithub.textContent = "Memuat repositori...";
+
+        const response = await fetch(
+            "https://api.github.com/users/adenhamdanraditya-spec/repos"
+        );
+
+        if (!response.ok) {
+            throw new Error("Gagal mengambil data GitHub");
         }
 
-        tampilkanProyek(hasil);
+        const repositori = await response.json();
 
-        tombolFilter.forEach((btn) => {
-            btn.classList.remove("aktif");
+        console.log("Data GitHub:", repositori);
+
+        daftarGithub.innerHTML = "";
+
+        repositori.forEach(repo => {
+            const kartu = document.createElement("div");
+
+            kartu.innerHTML = `
+                <h3>${repo.name}</h3>
+                <p>${repo.description || "Tidak ada deskripsi"}</p>
+                <a href="${repo.html_url}" target="_blank">
+                    Lihat GitHub
+                </a>
+            `;
+
+            daftarGithub.appendChild(kartu);
         });
 
-        tombol.classList.add("aktif");
-    });
-});
+    } catch (error) {
+        daftarGithub.textContent = "Gagal memuat repositori GitHub.";
+        console.error(error);
+    }
+}
+
+ambilGithub();
