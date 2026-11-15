@@ -95,6 +95,7 @@ async function ambilDataProyek() {
     }
 }
 
+
 // =================================
 // 5. MENAMPILKAN KARTU PROYEK
 // =================================
@@ -127,6 +128,7 @@ function tampilkanProyek(data) {
         daftarProyek.appendChild(kartu);
     });
 }
+
 
 // =================================
 // 6. FILTER PROYEK
@@ -167,6 +169,8 @@ function aktifkanFilter() {
 }
 
 ambilDataProyek();
+
+
 // =================================
 // 7. MENGAMBIL DATA GITHUB API
 // =================================
