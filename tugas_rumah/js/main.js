@@ -175,45 +175,58 @@ ambilDataProyek();
 // 7. MENGAMBIL DATA GITHUB API
 // =================================
 
+ 
+// =================================
+// 7. MENGAMBIL DATA GITHUB API
+// =================================
+
+
+// =================================
+// 7. MENGAMBIL DATA GITHUB API
+// =================================
+
 async function ambilGithub() {
     const daftarGithub = document.querySelector("#daftar-github");
+    const username = "adenhamdanraditya-spec";
 
     if (!daftarGithub) return;
 
     try {
-        daftarGithub.textContent = "Memuat repositori...";
+        daftarGithub.innerHTML = "<p>Memuat repositori...</p>";
 
         const response = await fetch(
-            "https://api.github.com/users/adenhamdanraditya-spec/repos"
+            `https://api.github.com/users/${username}/repos?sort=updated&direction=desc&per_page=5`
         );
 
         if (!response.ok) {
-            throw new Error("Gagal mengambil data GitHub");
+            throw new Error("Gagal mengambil data: " + response.status);
         }
 
         const repositori = await response.json();
 
-        console.log("Data GitHub:", repositori);
+        daftarGithub.innerHTML = `
+            <p>${repositori.length} repositori yang terakhir diperbarui.</p>
+            <ul id="list-github"></ul>
+        `;
 
-        daftarGithub.innerHTML = "";
+        const listGithub = document.querySelector("#list-github");
 
         repositori.forEach(repo => {
-            const kartu = document.createElement("div");
+            const item = document.createElement("li");
 
-            kartu.innerHTML = `
-                <h3>${repo.name}</h3>
-                <p>${repo.description || "Tidak ada deskripsi"}</p>
-                <a href="${repo.html_url}" target="_blank">
-                    Lihat GitHub
-                </a>
-            `;
+            const link = document.createElement("a");
+            link.href = repo.html_url;
+            link.textContent = repo.name;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
 
-            daftarGithub.appendChild(kartu);
+            item.appendChild(link);
+            listGithub.appendChild(item);
         });
 
     } catch (error) {
         daftarGithub.textContent = "Gagal memuat repositori GitHub.";
-        console.error(error);
+        console.error("Error GitHub:", error);
     }
 }
 

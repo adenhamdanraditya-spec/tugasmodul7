@@ -455,3 +455,14 @@ body.gelap section {
         grid-template-columns: 1fr;
     }
 }
+
+/* Warna nama repositori GitHub */
+#daftar-github a {
+    color: #c56b6b;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+#daftar-github a:hover {
+    color: #e63946;
+}
