@@ -1,19 +1,26 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ADEN HAMDAN RADITYA| Beranda</title>
+  <title>ADEN HAMDAN RADITYA | Beranda</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
   <header>
     <button id="tombol-tema">Mode Gelap</button>
+
     <div class="container navbar">
       <h1>ADEN HAMDAN RADITYA</h1>
+
       <nav class="menu-laptop">
         <ul>
           <li><a href="index.html">Beranda</a></li>
@@ -21,7 +28,7 @@
           <li><a href="kontak.html">Kontak</a></li>
         </ul>
       </nav>
-      <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
+
       <details class="menu-ponsel">
         <summary>Menu</summary>
         <nav>
@@ -37,36 +44,45 @@
 
   <main>
     <div class="container">
+
       <section class="hero">
         <img
-  src="img/stecu.jpeg"
-  alt="Foto profilku"
-  width="150"
->
+          src="img/stecu.jpeg"
+          alt="Foto profilku"
+          width="150"
+        >
 
         <div>
-          <h3>HALO,SAYA ADEN HAMDAN RADITYA</h3>
-          <p>siswa kelas X SMK, calon Junior Web Developer di Kelas Industri UBIG.</p>
+          <h3>HALO, SAYA ADEN HAMDAN RADITYA</h3>
+          <p>Siswa kelas X SMK, calon Junior Web Developer di Kelas Industri UBIG.</p>
           <a href="proyek.html" class="tombol">Lihat Proyek Saya</a>
         </div>
       </section>
 
       <section class="kartu">
         <h2>Tentang Saya</h2>
-        <p>Saya tinggal di selorejo blitar dan senang mencoba hal baru di dunia teknologi. Saya ingin bisa membuat website yang bermanfaat untuk sekolah dan UMKM di sekitar rumah.
-          saya meiliki ketertarikan dalam dunia teknologi,khususnya dalam pengembangan web. Saya ingin terus belajar dan mengembangkan keterampilan saya di bidang ini, serta berkontribusi pada proyek-proyek yang dapat memberikan dampak positif bagi masyarakat.
-          Saya senang mencoba hal-hal baru dan selalu berusaha untuk meningkatkan kemampuan saya dalam pemrograman web. Saya percaya bahwa dengan tekad dan kerja keras, saya dapat mencapai tujuan saya menjadi seorang web developer yang handal.
-          semoga dengan belajar di kelas industri UBIG saya bisa menjadi seorang web developer yang handal dan dapat memberikan kontribusi positif bagi masyarakat.
+        <p>
+          Saya tinggal di Selorejo Blitar dan senang mencoba hal baru di dunia teknologi.
+          Saya ingin bisa membuat website yang bermanfaat untuk sekolah dan UMKM di sekitar rumah.
+          Saya memiliki ketertarikan dalam dunia teknologi, khususnya dalam pengembangan web.
+          Saya ingin terus belajar dan mengembangkan keterampilan saya di bidang ini,
+          serta berkontribusi pada proyek-proyek yang dapat memberikan dampak positif bagi masyarakat.
+          Saya senang mencoba hal-hal baru dan selalu berusaha untuk meningkatkan kemampuan saya
+          dalam pemrograman web. Saya percaya bahwa dengan tekad dan kerja keras,
+          saya dapat mencapai tujuan saya menjadi seorang web developer yang handal.
+          Semoga dengan belajar di Kelas Industri UBIG saya bisa menjadi seorang web developer
+          yang handal dan dapat memberikan kontribusi positif bagi masyarakat.
         </p>
       </section>
 
       <div class="daftar-kartu">
+
         <section class="kartu">
           <h2>Hobi</h2>
           <ul>
-            <li>volly</li>
+            <li>Volly</li>
             <li>Membuat content sound horeg</li>
-            <li>merakit audio amplifier </li>
+            <li>Merakit audio amplifier</li>
             <li>Melihat karnaval</li>
           </ul>
         </section>
@@ -81,26 +97,51 @@
           </ol>
         </section>
 
-<section class="kartu">
-  <h2>Keahlian</h2>
-  <div id="daftar-keahlian"></div>
-  <h5>1 Html (menengah)</h5>
-  <h5>2 CSS (menengah)</h5>
-  <h5>3 Git dan Github (dasar)</h5>
-  <h5>4 Desain poster dengan canva (mahir)</h5>
-  <h5>5 JavaScript (Dasar)</h5>
-  <strong> keahlian baru</strong>
-  <h5>contoh: figma</h5>
-  <strong>Level: Dasar</strong>
-  
-</section>
-        
+        <!-- BAGIAN KEAHLIAN -->
+        <section class="kartu">
+          <h2>Keahlian</h2>
+<h4>1. HTML dasar(Menengah)</h4>
+          <h4>2. CSS dasar(Menengah)</h4>
+          <h4>3. JavaScript dasar(Menengah)</h4>
+          <h4>4. Git dasar(Menengah)</h4>
+          <h4>5. Figma dasar(Menengah)</h4>
+
+
+          <div id="daftar-keahlian"></div>
+
+          <h3>Keahlian Baru</h3>
+
+          <div class="form-keahlian">
+
+            <div class="input-group">
+              <label for="nama-keahlian">Nama Keahlian</label>
+              <input
+                type="text"
+                id="nama-keahlian"
+                placeholder="Contoh: Figma"
+              >
+            </div>
+
+            <div class="input-group">
+              <label for="level-keahlian">Level</label>
+              <input
+                type="text"
+                id="level-keahlian"
+                placeholder="Contoh: Dasar"
+              >
+            </div>
+
+          </div>
+        </section>
+
       </div>
 
       <section class="kartu">
         <h2>Jadwal Belajar</h2>
+
         <table>
           <caption>Jadwal belajar mandiri setiap minggu</caption>
+
           <thead>
             <tr>
               <th>Hari</th>
@@ -108,17 +149,20 @@
               <th>Kegiatan</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td>Senin</td>
               <td>19.00 - 20.00</td>
               <td>Membaca ulang modul</td>
             </tr>
+
             <tr>
               <td>Rabu</td>
               <td>19.00 - 21.00</td>
               <td>Mengerjakan tugas praktik</td>
             </tr>
+
             <tr>
               <td>Jumat</td>
               <td>19.30 - 20.30</td>
@@ -127,15 +171,22 @@
           </tbody>
         </table>
       </section>
+
     </div>
   </main>
 
   <footer>
-    <p>Kontak: <a href="mailto:adenhamdanraditya@gmail.com" target="_blank">adenhamdanraditya@gmail.com</a> |
+    <p>
+      Kontak:
+      <a href="mailto:adenhamdanraditya@gmail.com" target="_blank">adenhamdanraditya@gmail.com</a> |
       <a href="https://github.com/adenhamdanraditya-spec" target="_blank">GitHub</a> |
-      <a href="https://www.youtube.com/@AdenHamdanRaditya" target="_blank">YouTube</a></p>
+      <a href="https://www.youtube.com/@AdenHamdanRaditya" target="_blank">YouTube</a>
+    </p>
+
     <p>&copy; 2026 Aden Hamdan Raditya. Dibuat di Kelas Industri UBIG.</p>
   </footer>
-<script src="js/main.js"></script>
+
+  <script src="js/main.js"></script>
+
 </body>
 </html>
