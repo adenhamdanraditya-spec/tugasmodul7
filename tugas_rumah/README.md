@@ -4,7 +4,7 @@ Website portofolio pribadi yang saya buat di Kelas Industri UBIG
 Versi ini adalah **Portofolio v2**: tampil rapi di ponsel, tablet,
 dan laptop, serta interaktif dengan JavaScript.
 ## Tampilan
-[Tampilan beranda Portofolio v2](https://github.com/adenhamdanraditya-spec/tugasmodul7/blob/main/tugas_rumah/img/portofolio%20v2.png?raw=true)
+[Tampilan beranda Portofolio v2] ![alt text](<img/portofolio v2.png>)
 ## Fitur
 - Halaman **Beranda** berisi profil, hobi, cita-cita, jadwal
 belajar, dan daftar keahlian dari `data/keahlian.json` yang bisa
@@ -26,4 +26,4 @@ terbaru dari GitHub API
 - Kontak: Performance ,94 Accessibility 100, Best Practices 96, SEO 90
 ## Tautan
 - Website: https://tugasmodul7-tugasrumah.vercel.app/
-- Dibuat oleh: Andi Pratama, SMK Mitra
+- Dibuat oleh: Aden Hamdan Raditya, SMKS Brantas Karangkates
