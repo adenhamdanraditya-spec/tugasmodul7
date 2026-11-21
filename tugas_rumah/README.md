@@ -4,7 +4,7 @@ Website portofolio pribadi yang saya buat di Kelas Industri UBIG
 Versi ini adalah **Portofolio v2**: tampil rapi di ponsel, tablet,
 dan laptop, serta interaktif dengan JavaScript.
 ## Tampilan
-![Tampilan beranda Portofolio v2](tugas_rumah/img/portofolio v2.png)
+[Tampilan beranda Portofolio v2](tugas_rumah/img/portofolio v2.png)
 ## Fitur
 - Halaman **Beranda** berisi profil, hobi, cita-cita, jadwal
 belajar, dan daftar keahlian dari `data/keahlian.json` yang bisa
